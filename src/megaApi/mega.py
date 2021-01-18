@@ -1,5 +1,6 @@
 import math
 import re
+import sys
 import json
 import logging
 import secrets
@@ -756,7 +757,8 @@ class Mega:
                 raise ValueError('Mismatched mac')
             output_path = Path(dest_path + file_name)
             file_info = os.stat(temp_output_file.name)
-            temp_output_file.close()
+            if sys.platform.lower() == "win32":
+                temp_output_file.close()
             shutil.move(temp_output_file.name, output_path)
             if progress_hook:
                 progress_hook({
