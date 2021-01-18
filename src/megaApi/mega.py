@@ -755,10 +755,10 @@ class Mega:
                     file_mac[2] ^ file_mac[3]) != meta_mac:
                 raise ValueError('Mismatched mac')
             output_path = Path(dest_path + file_name)
+            file_info = os.stat(temp_output_file.name)
             temp_output_file.close()
             shutil.move(temp_output_file.name, output_path)
             if progress_hook:
-                file_info = os.stat(temp_output_file.name)
                 progress_hook({
                     'current': file_info.st_size,
                     'total': file_size,
