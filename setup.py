@@ -20,13 +20,13 @@ with open('README.md', 'r', encoding='utf-8') as rm_file:
 with open('HISTORY.md', 'r', encoding='utf-8') as hist_file:
     history = hist_file.read()
 
-setup(name='MegaAPI',
+setup(name='mega.py',
       version='1.0.9.dev0',
       packages=find_packages('src', exclude=('tests', )),
       package_dir={'': 'src'},
       include_package_data=True,
       zip_safe=False,
-      url='https://github.com/odwyersoftware/mega.py',
+      url='https://github.com/Samfun75/mega.py',
       description='Python lib for the Mega.co.nz API',
       long_description=readme + '\n\n' + history,
       long_description_content_type='text/markdown',
