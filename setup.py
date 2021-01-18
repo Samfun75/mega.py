@@ -20,7 +20,7 @@ with open('README.md', 'r', encoding='utf-8') as rm_file:
 with open('HISTORY.md', 'r', encoding='utf-8') as hist_file:
     history = hist_file.read()
 
-setup(name='mega.py',
+setup(name='MegaAPI',
       version='1.0.9.dev0',
       packages=find_packages('src', exclude=('tests', )),
       package_dir={'': 'src'},
