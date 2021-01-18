@@ -762,7 +762,7 @@ class Mega:
                 progress_hook({
                     'current': file_info.st_size,
                     'total': file_size,
-                    'name': temp_output_file.name,
+                    'name': file_name,
                     'status': 'finished',
                     'args': progress_args
                 })
