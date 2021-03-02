@@ -730,6 +730,8 @@ class Mega:
 
                 # fix for files under 16 bytes failing
                 if file_size > 16:
+                    if not i:
+                        i = 0
                     i += 16
                 else:
                     i = 0
@@ -809,6 +811,8 @@ class Mega:
 
                     # fix for files under 16 bytes failing
                     if file_size > 16:
+                        if not i:
+                            i = 0
                         i += 16
                     else:
                         i = 0
